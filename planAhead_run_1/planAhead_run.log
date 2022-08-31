@@ -1,0 +1,121 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from D:/ise/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/ise/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/ise/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source D:/szdl/kenijishuqi/pa.fromNetlist.tcl
+# create_project -name kenijishuqi -dir "D:/szdl/kenijishuqi/planAhead_run_1" -part xc7a100tfgg484-2L
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "D:/szdl/kenijishuqi/kenijishuqi.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {D:/szdl/kenijishuqi} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "kenijishuqi.ucf" [current_fileset -constrset]
+Adding file 'D:/szdl/kenijishuqi/kenijishuqi.ucf' to fileset 'constrs_1'
+# add_files [list {kenijishuqi.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc7a100tfgg484-2L
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design kenijishuqi.ngc ...
+WARNING:NetListWriters:298 - No output is written to kenijishuqi.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file kenijishuqi.edif ...
+ngc2edif: Total memory usage is 4316848 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/kenijishuqi.data/cache/kenijishuqi_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/kenijishuqi.data/cache/kenijishuqi_ngc_zx.edif]
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from D:/ise/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from D:/ise/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from D:/ise/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from D:/ise/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from D:/ise/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/fgg484/Package.xml
+Loading io standards from D:/ise/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from D:/ise/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/ConfigModes.xml
+Loading list of drcs for the architecture : D:/ise/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/drc.xml
+Parsing UCF File [D:/szdl/kenijishuqi/kenijishuqi.ucf]
+Finished Parsing UCF File [D:/szdl/kenijishuqi/kenijishuqi.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  LDC => LDCE: 5 instances
+
+Phase 0 | Netlist Checksum: d5bd3172
+link_design: Time (s): elapsed = 00:00:09 . Memory (MB): peak = 869.750 ; gain = 345.328
+set_property iostandard LVCMOS18 [get_ports [list {d[3]} {d[2]} {d[1]} {d[0]}]]
+set_property iostandard LVCMOS18 [get_ports [list {q[3]} {q[2]} {q[1]} {q[0]}]]
+set_property iostandard LVCMOS18 [get_ports [list clk]]
+set_property iostandard LVCMOS18 [get_ports [list co]]
+set_property iostandard LVCMOS18 [get_ports [list en]]
+set_property iostandard LVCMOS18 [get_ports [list load]]
+set_property iostandard LVCMOS18 [get_ports [list mr]]
+set_property iostandard LVCMOS18 [get_ports [list up_down]]
+set_property pulltype PULLDOWN [get_ports [list clk]]
+set_property pulltype PULLDOWN [get_ports [list en]]
+set_property pulltype PULLDOWN [get_ports [list load]]
+set_property pulltype PULLDOWN [get_ports [list mr]]
+set_property pulltype PULLDOWN [get_ports [list up_down]]
+set_property pulltype PULLDOWN [get_ports [list {d[3]} {d[2]} {d[1]} {d[0]}]]
+startgroup
+set_property package_pin R4 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin T3 [get_ports mr]
+endgroup
+startgroup
+set_property package_pin U3 [get_ports load]
+endgroup
+startgroup
+set_property package_pin T4 [get_ports en]
+endgroup
+set_property package_pin "" [get_ports [list  co]]
+startgroup
+set_property package_pin V3 [get_ports up_down]
+endgroup
+startgroup
+set_property package_pin V4 [get_ports {d[3]}]
+endgroup
+startgroup
+set_property package_pin W4 [get_ports {d[2]}]
+endgroup
+startgroup
+set_property package_pin Y4 [get_ports {d[1]}]
+endgroup
+startgroup
+set_property package_pin Y6 [get_ports {d[0]}]
+endgroup
+startgroup
+set_property package_pin R1 [get_ports {q[3]}]
+endgroup
+startgroup
+set_property package_pin P2 [get_ports {q[2]}]
+endgroup
+startgroup
+set_property package_pin P1 [get_ports {q[1]}]
+endgroup
+startgroup
+set_property package_pin N2 [get_ports {q[0]}]
+endgroup
+startgroup
+set_property package_pin M1 [get_ports co]
+endgroup
+save_constraints
+startgroup
+set_property package_pin R4 [get_ports clk]
+endgroup
+save_constraints
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Sat Dec 11 23:19:10 2021...
+INFO: [Common 17-83] Releasing license: PlanAhead
